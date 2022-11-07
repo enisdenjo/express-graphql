@@ -10,7 +10,7 @@ Please read the [GraphQL over HTTP spec](https://graphql.github.io/graphql-over-
 
 ## Say hello to [`graphql-http`](https://github.com/enisdenjo/graphql-http)
 
-The GraphQL official reference implementation of the [GraphQL over HTTP spec](https://graphql.github.io/graphql-over-http) is [`graphql-http`](https://github.com/enisdenjo/graphql-http).
+[`graphql-http`](https://github.com/enisdenjo/graphql-http) is now the GraphQL official reference implementation of the [GraphQL over HTTP spec](https://graphql.github.io/graphql-over-http).
 
 ## For library authors
 
