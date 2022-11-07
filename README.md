@@ -93,8 +93,8 @@ More extensions and further implementation examples are available - please consu
 You may also migrate to an alternative, other maintained JavaScript GraphQL servers worth mentioning are:
 
 - [`graphql-yoga`](https://www.the-guild.dev/graphql/yoga-server) ([fully compliant](https://github.com/enisdenjo/graphql-http/tree/master/implementations/graphql-yoga))
-- [`apollo-server`](https://www.apollographql.com/docs/apollo-server/) ([42 audits pass with 1 error](https://github.com/enisdenjo/graphql-http/tree/master/implementations/apollo-server))
-- [`mercurius`](https://mercurius.dev/) ([41 audits pass with 1 error](https://github.com/enisdenjo/graphql-http/tree/master/implementations/mercurius))
+- [`apollo-server`](https://www.apollographql.com/docs/apollo-server/) ([1 error](https://github.com/enisdenjo/graphql-http/tree/master/implementations/apollo-server))
+- [`mercurius`](https://mercurius.dev/) ([1 error](https://github.com/enisdenjo/graphql-http/tree/master/implementations/mercurius))
 
 ## Migrating
 
