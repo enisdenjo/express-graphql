@@ -88,14 +88,6 @@ for (const audit of serverAudits({
 
 More extensions and further implementation examples are available - please consult the [recipes section on `graphql-http`](https://github.com/enisdenjo/graphql-http#recipes), the [documentation](https://github.com/enisdenjo/graphql-http/tree/master/docs), or open an issue/discussion!
 
-## Alternatives
-
-You may also migrate to an alternative, other maintained JavaScript GraphQL servers worth mentioning are:
-
-- [`graphql-yoga`](https://www.the-guild.dev/graphql/yoga-server) ([fully compliant](https://github.com/enisdenjo/graphql-http/tree/master/implementations/graphql-yoga))
-- [`apollo-server`](https://www.apollographql.com/docs/apollo-server/) ([partially compliant](https://github.com/enisdenjo/graphql-http/tree/master/implementations/apollo-server))
-- [`mercurius`](https://mercurius.dev/) ([partially compliant](https://github.com/enisdenjo/graphql-http/tree/master/implementations/mercurius))
-
 ## Migrating
 
 Transitioning from `express-graphql` is very easy, this is how:
@@ -117,3 +109,11 @@ app.use(
 
 app.listen(4000);
 ```
+
+## Alternatives
+
+You may also migrate to an alternative, other maintained JavaScript GraphQL servers worth mentioning are:
+
+- [`graphql-yoga`](https://www.the-guild.dev/graphql/yoga-server) ([fully compliant](https://github.com/enisdenjo/graphql-http/tree/master/implementations/graphql-yoga))
+- [`apollo-server`](https://www.apollographql.com/docs/apollo-server/) ([partially compliant](https://github.com/enisdenjo/graphql-http/tree/master/implementations/apollo-server))
+- [`mercurius`](https://mercurius.dev/) ([partially compliant](https://github.com/enisdenjo/graphql-http/tree/master/implementations/mercurius))
