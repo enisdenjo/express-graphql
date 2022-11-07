@@ -16,7 +16,7 @@ Please read the [GraphQL over HTTP spec](https://graphql.github.io/graphql-over-
 
 As a reference implementation, [`graphql-http`](https://github.com/enisdenjo/graphql-http) implements exclusively the [GraphQL over HTTP spec](https://graphql.github.io/graphql-over-http/).
 
-In case you're seeking for a full-featured experience (with file uploads, @defer/@stream directives, subscriptions, etc.), you're recommended to use some of the great JavaScript GraphQL server alternatives:
+In case you're seeking for a full-featured experience (with file uploads, @defer/@stream directives, subscriptions, etc.), you're recommended to use some of the great JavaScript GraphQL server options:
 
 - [`graphql-yoga`](https://www.the-guild.dev/graphql/yoga-server) ([fully compliant](https://github.com/enisdenjo/graphql-http/tree/master/implementations/graphql-yoga))
 - [`apollo-server`](https://www.apollographql.com/docs/apollo-server/) ([partially compliant](https://github.com/enisdenjo/graphql-http/tree/master/implementations/apollo-server))
