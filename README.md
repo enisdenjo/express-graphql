@@ -14,9 +14,9 @@ The GraphQL official reference implementation of the [GraphQL over HTTP spec](ht
 
 ### Spec compliance
 
-[`graphql-http`](https://github.com/enisdenjo/graphql-http) is **fully** compliant with the [GraphQL over HTTP spec](https://graphql.github.io/graphql-over-http).
+[`graphql-http`](https://github.com/enisdenjo/graphql-http) being a reference implementation is fully compliant with the [GraphQL over HTTP spec](https://graphql.github.io/graphql-over-http).
 
-Additionally, `graphql-http` will maintain a list of GraphQL servers in the ecosystem and keep their compliance results so you can check easily.
+Additionally, `graphql-http` will maintain a list of GraphQL servers in the ecosystem and keep their compliance results so you can check easily - [see the current ones here](https://github.com/enisdenjo/graphql-http/tree/master/implementations).
 
 ### Integrated client
 
