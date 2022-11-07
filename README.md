@@ -10,51 +10,19 @@ Please read the [GraphQL over HTTP spec](https://graphql.github.io/graphql-over-
 
 ## Say hello to [`graphql-http`](https://github.com/enisdenjo/graphql-http)
 
-The GraphQL official reference implementation of the [GraphQL over HTTP spec](https://graphql.github.io/graphql-over-http) is [`graphql-http`](https://github.com/enisdenjo/graphql-http), and you should consider using it instead.
+The GraphQL official reference implementation of the [GraphQL over HTTP spec](https://graphql.github.io/graphql-over-http) is [`graphql-http`](https://github.com/enisdenjo/graphql-http).
 
-### Spec compliance
+## For library authors
 
-[`graphql-http`](https://github.com/enisdenjo/graphql-http) being a reference implementation is fully compliant with the [GraphQL over HTTP spec](https://graphql.github.io/graphql-over-http).
+Being the official [GraphQL over HTTP spec](https://graphql.github.io/graphql-over-http/) reference implementation, [`graphql-http`](https://github.com/enisdenjo/graphql-http) follows the specification strictly without any additional features (like file uploads, @stream/@defer directives and subscriptions).
 
-Additionally, `graphql-http` will maintain a list of GraphQL servers in the ecosystem and keep their compliance results so you can check easily - [see the current ones here](https://github.com/enisdenjo/graphql-http/tree/master/implementations).
+Having said this, [`graphql-http`](https://github.com/enisdenjo/graphql-http) is mostly aimed for library authors and simple server setups, where the requirements are exact to what the aforementioned spec offers.
 
-### Integrated client
-
-A GraphQL over HTTP client ships with [`graphql-http`](https://github.com/enisdenjo/graphql-http) and can be used with _any_ compliant server! Using it is rather simple:
-
-```js
-import { createClient } from 'graphql-http';
-
-const client = createClient({
-  url: 'http://localhost:4000/graphql',
-});
-
-(async () => {
-  let cancel = () => {
-    /* abort the request if it is in-flight */
-  };
-
-  const result = await new Promise((resolve, reject) => {
-    let result;
-    cancel = client.subscribe(
-      {
-        query: '{ hello }',
-      },
-      {
-        next: (data) => (result = data),
-        error: reject,
-        complete: () => resolve(result),
-      },
-    );
-  });
-
-  expect(result).toEqual({ hello: 'world' });
-})();
-```
-
-### Audit suite
+### Spec compliance audit suite
 
 Suite of tests used to audit an HTTP server for [GraphQL over HTTP spec](https://graphql.github.io/graphql-over-http) compliance is [available in `graphql-http`](https://github.com/enisdenjo/graphql-http/blob/master/src/audits/server.ts) and you can use it to check your own, or other, servers!
+
+Additionally, `graphql-http` will maintain a list of GraphQL servers in the ecosystem and keep their compliance results so you can check easily - [see the current ones here](https://github.com/enisdenjo/graphql-http/tree/master/implementations).
 
 Furthermore, you can even integrate the audit suite inside your [Jest](https://jestjs.io/) environment while developing a GraphQL server so that you always stay compliant:
 
@@ -84,35 +52,11 @@ for (const audit of serverAudits({
 }
 ```
 
-### And more...
+## For users
 
-More extensions and further implementation examples are available - please consult the [recipes section on `graphql-http`](https://github.com/enisdenjo/graphql-http#recipes), the [documentation](https://github.com/enisdenjo/graphql-http/tree/master/docs), or open an issue/discussion!
+As a reference implementation, [`graphql-http`](https://github.com/enisdenjo/graphql-http) implements exclusively the [GraphQL over HTTP spec](https://graphql.github.io/graphql-over-http/).
 
-## Migrating
-
-Transitioning from `express-graphql` is very easy, this is how:
-
-```diff
-import express from 'express';
-import { schema } from './my-graphql-schema';
-
--import { graphqlHTTP } from 'express-graphql';
-+import { createHandler } from 'graphql-http/lib/use/express';
-
-const app = express();
-
-app.use(
-  '/graphql',
--  graphqlHTTP({ schema }),
-+  createHandler({ schema }),
-);
-
-app.listen(4000);
-```
-
-## Alternatives
-
-You may also migrate to an alternative, other maintained JavaScript GraphQL servers worth mentioning are:
+In case you're seeking for a full-featured experience (with file uploads, @defer/@stream directives, subscriptions, etc.), you're recommended to use some of the great JavaScript GraphQL server alternatives:
 
 - [`graphql-yoga`](https://www.the-guild.dev/graphql/yoga-server) ([fully compliant](https://github.com/enisdenjo/graphql-http/tree/master/implementations/graphql-yoga))
 - [`apollo-server`](https://www.apollographql.com/docs/apollo-server/) ([partially compliant](https://github.com/enisdenjo/graphql-http/tree/master/implementations/apollo-server))
